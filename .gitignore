@@ -6,3 +6,4 @@ images
 
 #fichier dotenv
 .env
+.vercel
