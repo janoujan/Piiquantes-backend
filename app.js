@@ -30,17 +30,18 @@ app
 
 // Ajout des headers
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization'
-  )
+  );
   res.setHeader(
     'Access-Control-Allow-Methods',
     'GET, POST, PUT, DELETE, PATCH, OPTIONS'
-  )
-  res.setHeader('Access-Control-Request-Headers', 'https://piiquantesback-382506.oa.r.appspot.com/' )
-  next()
+  );
+  res.setHeader('Access-Control-Request-Headers', 'https://piiquantesback-382506.oa.r.appspot.com/' );
+  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+  next();
 });
 
 // This sets custom options for the `referrerPolicy` middleware.
