@@ -4,8 +4,8 @@
   "description": "projet etudiant piiquante",
   "main": "server.js",
   "engines": {
-     "node": "18.x"
-     },
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "nodemon server",
     "start": "node server"
